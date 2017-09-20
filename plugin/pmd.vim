@@ -96,7 +96,7 @@ function! s:Pmd_Run(...) "{{{1
   if a:0 == 0
       let l:cmd = g:Pmd_Cmd . " -d " . expand("%") . " -f csv -R " . g:Pmd_Rulesets
   else
-      let l:cmd = g:Pmd_Cmd . " -d " . a:1 . " f csv -R " . g:Pmd_Rulesets
+      let l:cmd = g:Pmd_Cmd . " -d " . a:1 . " -f csv -R " . g:Pmd_Rulesets
   endif
   exe "silent !" . l:cmd . " > " . l:tmpfile
   exe "cfile " . l:tmpfile
